@@ -9,7 +9,7 @@ public class MultiThreadingDemo {
         thread1.setName("Aaron");
 
         MineThread thread2 = new MineThread();
-        thread2.setName("Indra");
+        thread2.setName("");
 
 //        thread1.setPriority(10);
 

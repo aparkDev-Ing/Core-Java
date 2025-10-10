@@ -26,7 +26,7 @@ class MyRunnableFive implements Runnable {
 class MyRunnableFour implements Runnable {
 
     static String data ;
-    static Thread indra;
+    static Thread i;
 
     @Override
     public void run()
@@ -34,7 +34,7 @@ class MyRunnableFour implements Runnable {
         System.out.println("Priorty for this thread: " +Thread.currentThread().getPriority());
 
         try {
-            indra.join();
+            i.join();
         }
         catch(InterruptedException ie){
             System.out.println("Error occured during joining: " +ie.getMessage());
@@ -56,9 +56,9 @@ public class JoinDemo {
 
         MyRunnableFive mr2 = new MyRunnableFive();
 
-        Thread thread2 = new Thread(mr2, "Indra");
+        Thread thread2 = new Thread(mr2, "");
 
-        mr1.indra = thread2;
+        mr1.i = thread2;
 
         mr2.main = Thread.currentThread();
 

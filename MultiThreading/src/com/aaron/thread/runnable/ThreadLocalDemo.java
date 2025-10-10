@@ -60,7 +60,7 @@ public class ThreadLocalDemo
 
         Thread thread2 = new Thread( ()->{
 
-            threadLocalString.set("Indra");
+            threadLocalString.set("devin");
 
             threadLocalObject.set(new Pizza());
 

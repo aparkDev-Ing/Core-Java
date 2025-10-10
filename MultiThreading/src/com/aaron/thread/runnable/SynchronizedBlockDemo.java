@@ -42,7 +42,7 @@ public class SynchronizedBlockDemo {
             public void run() {
                 obj1.setCounter2();
             }
-        },"Indra");
+        },"");
 
 
         thread1.start();

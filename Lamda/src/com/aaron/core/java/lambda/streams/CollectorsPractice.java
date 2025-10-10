@@ -69,15 +69,23 @@ public class CollectorsPractice<T> {
         //Max
         IntStream intStream = new Random().ints(1,46).limit(6);
 
-        //OptionalInt max = intStream.max();
+        int[] intArray = {14,22,36,46,59};
+
+        IntStream intStream1 = Arrays.stream(intArray);
+
+        OptionalInt max = intStream1.max();
+
+        System.out.println("Max number(using max method) : "+ max.orElse(0));
 
         //OptionalInt max = intStream.reduce(Integer::max);
 
-        //Optional<Integer> max = intStream.boxed().collect(Collectors.reducing(Integer::max));
+        //Optional<Integer> max2 = intStream2.boxed().collect(Collectors.reducing(Integer::max));
 
-        Optional<Integer> max = intStream.boxed().collect(Collectors.reducing( (a,b) -> Integer.max(a,b)));
+        intStream1 = Arrays.stream(intArray);
+        
+        Optional<Integer> max2 = intStream1.boxed().collect(Collectors.reducing( (a,b) -> Integer.max(a,b)));
 
-        System.out.println("Max number: "+ max.orElse(0));
+        System.out.println("Max number(using reducing): "+ max2.orElse(0));
 
 
         //Joining

@@ -4,19 +4,20 @@ public class HappensBeforeDemo {
 
     static int counter;
 
-     boolean isValid = true;
+     volatile boolean isValid = true;
 
     public static void main(String args[]) throws InterruptedException{
 
         HappensBeforeDemo obj = new HappensBeforeDemo();
 
         new Thread(()-> {
+            System.out.println("Thread " +Thread.currentThread().getName()+" is starting.");
             while(obj.isValid){
                     counter++;
             }
             System.out.println("Counter value: " + counter);
 
-        } ).start();
+        } ,"Thread1").start();
 
         new Thread(()-> {
 
@@ -28,7 +29,8 @@ public class HappensBeforeDemo {
                 System.out.println("Thread Interuppted " +e);
                 Thread.currentThread().interrupt();
             }
-        } ).start();
+            System.out.println("Thread "+Thread.currentThread().getName() +" is terminating.");
+        } ,"Thread2").start();
 
     }
 

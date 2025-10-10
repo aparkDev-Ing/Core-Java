@@ -1,6 +1,6 @@
 package com.aaron.core.Java;
 
-import javax.smartcardio.Card;
+
 
 public class PaymentMethod {
 

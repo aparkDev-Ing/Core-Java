@@ -22,7 +22,7 @@ public class RestaurantSimulator {
         tr1.start();
         tr2.start();
 
-        //new Thread(new Customer("Sarah",table));
+        //new Thread(new Customer("Karen",table));
 
 //        try{
 //             Thread.sleep(2000);

@@ -114,7 +114,7 @@ public class StreamGroupingPractice {
 
         //GroupBy manager and display best store
         storeStream = storeList.stream();
-        Map<String, Store> managerBestStoreMap = storeStream.collect(Collectors.groupingBy(Store::getManagerName,Collectors.collectingAndThen(Collectors.maxBy(Comparator.comparingInt(Store::getSalesToday)), s -> s.orElseGet(()-> new Store()))));
+        Map<String, Store> managerBestStoreMap = storeStream.collect(Collectors.groupingBy(Store::getManagerName,Collectors.collectingAndThen(Collectors.maxBy(Comparator.comparingInt(Store::getSalesToday)), s -> s.orElseGet(()-> new Store()) )));
         //Map<String, Optional<Store>> managerBestStoreMap = storeStream.collect(Collectors.groupingBy(Store::getManagerName, Collectors.maxBy(Comparator.comparingInt(Store::getSalesToday))));
         //Map<String, Store> managerBestStoreMap = storeStream.collect(Collectors.groupingBy(Store::getManagerName, Collectors.maxBy(Comparator.comparingInt(Store::getSalesToday))));
         System.out.println("Best Store per manager by performance: " + managerBestStoreMap);

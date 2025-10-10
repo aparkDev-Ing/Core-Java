@@ -29,14 +29,7 @@ public class Main {
 
     public static void main(String args[]) throws Exception{
 
-        //executeThreadPool();
-
-        List<String> stringList = new ArrayList<>();
-
-        if(stringList != null ){
-            System.out.println("Stringlist: "+ stringList);
-            stringList.get(0);
-        }
+        executeThreadPool();
 
 
     }

@@ -17,9 +17,28 @@ public class OptimisticLockCounter {
 
             successful = count.compareAndSet(currentValue, newValue);
 
+            System.out.println(Thread.currentThread().getName() +" has tried and result is "+ successful);
+
         }
 
 
+    }
+
+    public static void main(String args[]){
+
+        OptimisticLockCounter optimisticLockCounter = new OptimisticLockCounter();
+
+        Thread th1 = new Thread(()->{
+            optimisticLockCounter.inc();
+
+        },"Thread1");
+
+        Thread th2 = new Thread(()->{
+            optimisticLockCounter.inc();
+        },"Thread2");
+
+        th1.start();
+        th2.start();
     }
 
 }

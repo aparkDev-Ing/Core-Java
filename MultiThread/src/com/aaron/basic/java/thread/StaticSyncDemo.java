@@ -10,12 +10,12 @@ class ThreadExecutor{
 
     public static void main(String args[]){
 
-        Runnable r = new ThreadRunner();
+//        Runnable r = new ThreadRunner();
+//
+//        Runnable r2 = new ThreadRunner2();
 
-        Runnable r2 = new ThreadRunner2();
-
-        Runnable r3 = new ThreadRunner3();
-
+//        Runnable r3 = new ThreadRunner3();
+//
         Order a = new Order(10);
 
         a.setName("Aaron");
@@ -27,7 +27,7 @@ class ThreadExecutor{
 //        new Thread(r).start();
 //
 //        new Thread(r2).start();
-//
+
 
 //        new Thread(r3).start();
 

@@ -1,4 +1,3 @@
-import org.omg.SendingContext.RunTime;
 
 public class BasicThread {
 

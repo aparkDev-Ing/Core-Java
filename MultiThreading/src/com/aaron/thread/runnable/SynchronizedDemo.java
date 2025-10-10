@@ -99,7 +99,7 @@ public class SynchronizedDemo {
                 Counter.addString(newStringArray, stringArray);
 
             }
-        },"Indra");
+        },"");
 
         t1.start();
         t2.start();

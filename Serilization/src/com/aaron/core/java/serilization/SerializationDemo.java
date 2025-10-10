@@ -1,6 +1,6 @@
 package com.aaron.core.java.serilization;
 
-import org.omg.SendingContext.RunTime;
+
 
 import java.io.*;
 
@@ -28,14 +28,14 @@ class CheeseBurger extends Burger{
 class KimchiBurger extends Burger{
 
     public String name = "KimchiBurger";
-//    public String brand = "Indra's";
+//    public String brand = "'s";
 
     public final double price = 8.00;
 
     public KimchiBurger(String bread, String pattie){
         this.bread = bread;
         this.pattie= pattie;
-//        this.brand = "Indra's";
+
 
     }
 
@@ -154,7 +154,7 @@ public class SerializationDemo <T extends Burger> {
 
         KimchiBurger kimchiBurger = new KimchiBurger("Plain Bread","Chicken");
 
-        kimchiBurger.setBrand("Indra's");
+        kimchiBurger.setBrand("'s");
 
         FileOutputStream fos = new FileOutputStream("burgers.ser");
 

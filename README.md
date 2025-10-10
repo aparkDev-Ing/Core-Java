@@ -1,2 +1,7 @@
 # Core-Java
-Core Java Practice and Examples
+Core Java Practices and Studies 
+- Collections
+- Generics
+- Multi-Threading, Parellelism and Concurrency
+- I/O and Network
+- HTTP and Web Application Server

@@ -10,18 +10,18 @@ public class ThreadLocalInheritanceDemo {
 
         threadLocalString.set("Main");
         System.out.println("Main Thread Local value: "+threadLocalString.get());
-        parentThreadLocalString.set("IndraInherited");
+        parentThreadLocalString.set("Kevin");
         System.out.println("Parent's "+ parentThreadLocalString.get());
 
         Thread thread1 = new Thread(()->
         {
 
-            threadLocalString.set("Ruchitha");
+            threadLocalString.set("Thread1");
 
             System.out.println("Child's before Overriden: "+parentThreadLocalString.get());
 
 
-            parentThreadLocalString.set("RuchithaInherited");
+            parentThreadLocalString.set("KevinInherited");
 
             System.out.println("Child Thread Local value: "+ threadLocalString.get());
             System.out.println("Child once overriden: "+parentThreadLocalString.get());

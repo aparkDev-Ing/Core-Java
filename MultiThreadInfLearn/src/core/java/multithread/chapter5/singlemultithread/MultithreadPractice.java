@@ -32,23 +32,23 @@ public class MultithreadPractice {
         System.out.println("Final Result: "+ sum);
     }
 
-    public synchronized static void sum (){
-        for(int i =0; i<10; i++) {
-            try {
-                Thread.sleep(100);
-                sum++;
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-
-        }
-    }
-
 //    public synchronized static void sum (){
-//
+//        for(int i =0; i<10; i++) {
+//            try {
+//                Thread.sleep(100);
 //                sum++;
+//            } catch (InterruptedException e) {
+//                throw new RuntimeException(e);
+//            }
 //
 //        }
+//    }
+
+    public synchronized static void sum (){
+
+                sum++;
+
+        }
 
 
 }
@@ -59,26 +59,26 @@ class Calculator implements Runnable{
     public void run(){
         //MultithreadPractice obj = new MultithreadPractice();
 
-        try {
-            Thread.sleep(100);
-//                synchronized (MultithreadPractice.obj) {
-            MultithreadPractice.sum();
-//                }
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-
-//       for(int i =0; i<10; i++) {
-//            try {
-//                Thread.sleep(100);
+//        try {
+//            Thread.sleep(100);
 ////                synchronized (MultithreadPractice.obj) {
-//                    MultithreadPractice.sum();
+//            MultithreadPractice.sum();
 ////                }
-//            } catch (InterruptedException e) {
-//                throw new RuntimeException(e);
-//            }
-//
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
 //        }
+
+       for(int i =0; i<10; i++) {
+            try {
+                Thread.sleep(100);
+//                synchronized (MultithreadPractice.obj) {
+                    MultithreadPractice.sum();
+//                }
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+
+        }
     }
 
 }

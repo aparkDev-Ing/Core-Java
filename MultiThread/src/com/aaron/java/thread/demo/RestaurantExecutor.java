@@ -9,7 +9,7 @@ public class RestaurantExecutor {
         //Runnable r = new Customer("Aaron");
 
         Customer david = new Customer("David");
-        Customer amy = new Customer("Amy");
+        Customer jane = new Customer("Jane");
         Customer jesse = new Customer("Jesse");
 
 //        Thread tr1 = new Thread(aaron,"Aaron1");
@@ -17,7 +17,7 @@ public class RestaurantExecutor {
 //        Thread tr3 = new Thread(aaron,"Aaron3");
 
         Thread tr1 = new Thread(david);
-        Thread tr2 = new Thread(amy);
+        Thread tr2 = new Thread(jane);
         Thread tr3 = new Thread(jesse);
 
 
@@ -63,7 +63,7 @@ public class RestaurantExecutor {
         System.out.println("Total number of orders: " + Order.currentNumberOfOrders);
         System.out.println("Total number of orders left in kitchen: " + Kitchen.listOfOrders.size() );
         System.out.println("Customer "+ david.getName() + " has placed "+ david.listOfOrderFromCustomer.size() +" orders"  );
-        System.out.println("Customer "+ amy.getName()  + " has placed "+  amy.listOfOrderFromCustomer.size() +" orders");
+        System.out.println("Customer "+ jane.getName()  + " has placed "+  jane.listOfOrderFromCustomer.size() +" orders");
         System.out.println("Customer "+ jesse.getName()  + " has placed "+  jesse.listOfOrderFromCustomer.size() +" orders");
 
     }

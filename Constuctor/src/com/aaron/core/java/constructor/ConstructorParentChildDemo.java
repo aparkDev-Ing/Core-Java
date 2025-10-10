@@ -18,7 +18,7 @@ public class ConstructorParentChildDemo {
 
 class ChildClass extends ConstructorParentChildDemo{
 
-    String x = "Indra";
+    String x = "";
 
     ChildClass() {
         super("word");

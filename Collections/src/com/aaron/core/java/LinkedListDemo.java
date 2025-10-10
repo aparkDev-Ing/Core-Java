@@ -12,9 +12,9 @@ public class LinkedListDemo {
 
         stringLinkedList.add("Aaron");
 
-        stringLinkedList.add("Arielle");
+        stringLinkedList.add("James");
 
-        stringLinkedList.add("Annie");
+        stringLinkedList.add("Devin");
 
         stringLinkedList.add("Madelynn");
 

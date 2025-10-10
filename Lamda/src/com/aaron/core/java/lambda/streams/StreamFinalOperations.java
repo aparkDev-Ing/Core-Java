@@ -9,6 +9,22 @@ import java.util.stream.Stream;
 
 public class StreamFinalOperations<T> {
 
+    public long parellelsum(long n){
+
+        //return Stream.iterate(1L, i -> i+1).limit(8).parallel().reduce(0L,Long::sum);
+
+        //return Stream.iterate(1L, i -> i+1).limit(8).parallel().reduce(0L, (a,b) -> Long.sum(a,b));
+
+        return Stream.iterate(1L, i -> i+1).limit(8).parallel().reduce(0L, (a,b) -> Long.sum(a,b));
+
+        //return Stream.iterate(1L, i -> i+1).limit(8).parallel().reduce(0L, (a,b) -> a+b);
+    }
+
+//    public static void main(String args[]){
+//
+//        System.out.println(new StreamFinalOperations().parellelsum(8));
+//    }
+
     public static void main(String args[]){
 
         StreamFinalOperations streamFinalOperations = new StreamFinalOperations();

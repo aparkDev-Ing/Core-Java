@@ -22,7 +22,7 @@ public class SleepDemo {
 
         MyRunnableSix mr1 = new MyRunnableSix();
 
-        Thread thread1 = new Thread(mr1,"Varthini");
+        Thread thread1 = new Thread(mr1,"james");
 
         thread1.start();
 
