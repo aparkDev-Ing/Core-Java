@@ -20,8 +20,8 @@ public class CheckedVersusUncheckedDemo {
             System.out.println(fnfe.getMessage());
 
             //throw new IOException("FileNotFoundException");
-            //throw new RuntimeException(new Throwable("FileNotFoundException"));
             throw new RuntimeException("File is not Found ",new Throwable("aaron.txt"));
+            //throw new RuntimeException(new Throwable("FileNotFoundException"));
             //throw new RuntimeException();
         }
         System.out.println("After Exception Handling");
